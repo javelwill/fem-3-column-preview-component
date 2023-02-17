@@ -1,0 +1,161 @@
+:root {
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-very-dark-cyan: hsl(179, 100%, 13%);
+  --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --clr-very-light-gray: hsl(0, 0%, 95%);
+
+  --fs-normal: .9375rem;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  --ff-normal: 'Lexend Deca', sans-serif;
+  --ff-accent: 'Big Shoulders Display', sans-serif
+}
+
+/* css reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* general styles */
+
+body {
+  font-size: var(--fs-normal);
+  font-family: var(--ff-normal);
+  margin: 1.25rem;
+  display: grid;
+  place-content: safe center;
+}
+
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  border-radius: .5rem;
+  overflow: hidden;
+  max-width: 327px;
+}
+
+li {
+  padding: 3em;
+  display: grid;
+  gap: 2em
+}
+
+li:nth-of-type(1) {
+  background-color: var(--clr-bright-orange);
+}
+
+li:nth-of-type(2) {
+  background-color: var(--clr-dark-cyan);
+}
+
+li:nth-of-type(3) {
+  background-color: var(--clr-very-dark-cyan);
+}
+
+h1 {
+  color: var(--clr-very-light-gray);
+  text-transform: uppercase;
+  font-family: var(--ff-accent);
+}
+
+p {
+  color: var(--clr-transparent-white)
+}
+
+li a {
+  background-color: var(--clr-very-light-gray);
+  color: var(--clr-dark-cyan);
+  text-decoration: none;
+  text-align: center;
+  border-radius: 1.125em;
+  padding: .5em 2em;
+  width: fit-content;
+  border: 1px solid transparent;
+}
+
+li:nth-of-type(1) a {
+  color: var(--clr-bright-orange);
+}
+
+li:nth-of-type(2) a {
+  color: var(--clr-dark-cyan);
+}
+
+li:nth-of-type(3) a {
+  color: var(--clr-very-dark-cyan);
+}
+
+li a:hover {
+  background-color: transparent;
+  color: var(--clr-very-light-gray);
+  border: 1px solid var(--clr-very-light-gray);
+}
+
+
+
+
+@media screen and (min-width: 900px) {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 920px;
+
+  }
+
+  a {
+    margin-top: 2em;
+  }
+}
